@@ -1,0 +1,17 @@
+<section class="form-landing">
+  <form [formGroup]="homeForm">
+    <div class="form-group">
+      <label for="nomeCompleto">{{label.nome}}</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" (keyup)="buscarCidades()" placeholder="Seu nome" formControlName="cidade">
+      <label for="nomeCompleto">{{label.email}}</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="email@exemplo.com.br">
+      <label for="nomeCompleto">{{label.celular}}</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Seu telefone">
+      <label for="nomeCompleto">{{label.cidade}}</label>
+      <input  type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="listaCidades.Descricao"/>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Selecione a cidade">
+      <label for="nomeCompleto">{{label.cargos}}</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Selecione o cargo">
+    </div>
+  </form>
+</section>
